@@ -38,18 +38,18 @@ By the end of this series, you'll be able to:
 ### Phase 1: Core Language Foundations
 | # | Notebook | Description |
 |---|----------|-------------|
-| 04 | `sql_foundations` | SQL mastery + creates all datasets used throughout the series |
-| 05 | `sql_advanced_patterns` | Window functions, cohort analysis, CTEs, optimization |
-| 06 | `python_foundations` | Python for DE: types, OOP, error handling, pipeline patterns |
-| 07 | `python_advanced_patterns` | Generators, decorators, concurrency, production frameworks |
-| 08 | `pyspark_deep_dive` | Spark architecture, DataFrame API, transformations, joins |
-| 09 | `pyspark_advanced_patterns` | Complex types, UDFs, broadcast joins, Delta operations |
+| 04 | `cs_fundamentals` | Networking, OS, database internals, distributed systems |
+| 05 | `sql_foundations` | SQL mastery + creates all datasets used throughout the series |
+| 06 | `sql_advanced_patterns` | Window functions, cohort analysis, CTEs, optimization |
+| 07 | `hadoop_ecosystem` | HDFS, MapReduce, YARN, Kafka, Hive — history and concepts |
+| 08 | `python_foundations` | Python for DE: types, OOP, error handling, pipeline patterns |
+| 09 | `python_advanced_patterns` | Generators, decorators, concurrency, production frameworks |
+| 10 | `pyspark_deep_dive` | Spark architecture, DataFrame API, transformations, joins |
+| 11 | `pyspark_advanced_patterns` | Complex types, UDFs, broadcast joins, Delta operations |
 
-### Phase 2: Computer Science & Theory
+### Phase 2: Data Theory & Architecture
 | # | Notebook | Description |
 |---|----------|-------------|
-| 10 | `cs_fundamentals` | Networking, OS, database internals, distributed systems |
-| 11 | `hadoop_ecosystem` | HDFS, MapReduce, YARN, Kafka, Hive — history and concepts |
 | 12 | `data_modeling` | Kimball, Data Vault, OBT, Activity Schema, SCD types |
 | 13 | `lakehouse_architecture` | Lambda, Kappa, Medallion, Data Mesh patterns |
 
