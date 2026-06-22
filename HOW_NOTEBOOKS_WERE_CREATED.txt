@@ -1,0 +1,49 @@
+HOW THESE NOTEBOOKS WERE CREATED
+=================================
+
+These .ipynb notebooks were generated programmatically using Python build scripts.
+
+Process:
+1. Each notebook has a corresponding Python script (build_XX.py) that defines
+   the notebook content using md() and code() helper functions.
+2. The script constructs a valid Jupyter notebook JSON structure with cells.
+3. Running `python3 build_XX.py` generates the .ipynb file in the notebooks/ directory.
+4. After all notebooks were generated and validated, the build scripts were deleted
+   to keep the repository clean.
+
+The notebooks are SELF-CONTAINED -- you do not need the build scripts to use them.
+Simply import the .ipynb files into Databricks, Jupyter, or Google Colab and run them.
+
+If you want to regenerate or modify a notebook:
+- Edit the .ipynb file directly in any Jupyter-compatible editor
+- Or create a new build script following the pattern below
+
+Build script pattern:
+---------------------
+    import json, os
+
+    def md(text):
+        lines = [l + "\n" for l in text.split("\n")]
+        lines[-1] = lines[-1].rstrip("\n")
+        return {"cell_type": "markdown", "metadata": {}, "source": lines}
+
+    def code(text):
+        lines = [l + "\n" for l in text.split("\n")]
+        lines[-1] = lines[-1].rstrip("\n")
+        return {"cell_type": "code", "metadata": {}, "source": lines, "outputs": [], "execution_count": None}
+
+    cells = []
+    cells.append(md("# Title"))
+    cells.append(code("print('hello')"))
+
+    notebook = {
+        "nbformat": 4, "nbformat_minor": 5,
+        "metadata": {
+            "kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
+            "language_info": {"name": "python", "version": "3.11.0"}
+        },
+        "cells": cells
+    }
+
+    with open("output.ipynb", "w") as f:
+        json.dump(notebook, f, indent=1, ensure_ascii=False)
